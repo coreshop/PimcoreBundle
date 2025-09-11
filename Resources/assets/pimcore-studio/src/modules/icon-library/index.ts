@@ -15,19 +15,19 @@ import { serviceIds } from '@pimcore/studio-ui-bundle/app'
 import { type IconLibrary } from '@pimcore/studio-ui-bundle/modules/icon-library'
 
 // @ts-ignore
-import clearFilterIcon from '../assets/clear-filter.svg?react'
+import clearFilterIcon from '../../assets/clear-filter.svg?react'
 // @ts-ignore
-import dynamicDropdownIcon from '../assets/dynamic-dropdown.svg?react'
+import dynamicDropdownIcon from '../../assets/dynamic-dropdown.svg?react'
 // @ts-ignore
-import dynamicDropdownMultipleIcon from '../assets/dynamic-dropdown-multiple.svg?react'
+import dynamicDropdownMultipleIcon from '../../assets/dynamic-dropdown-multiple.svg?react'
 // @ts-ignore
-import embeddedClassIcon from '../assets/embedded_class.svg?react'
+import embeddedClassIcon from '../../assets/embedded_class.svg?react'
 // @ts-ignore
-import itemSelectorIcon from '../assets/item-selector.svg?react'
+import itemSelectorIcon from '../../assets/item-selector.svg?react'
 // @ts-ignore
-import serializedIcon from '../assets/serialized.svg?react'
+import serializedIcon from '../../assets/serialized.svg?react'
 // @ts-ignore
-import superBoxSelectIcon from '../assets/super-box-select.svg?react'
+import superBoxSelectIcon from '../../assets/super-box-select.svg?react'
 
 export const PimcoreBundleIconModule: AbstractModule = {
   onInit(): void {
