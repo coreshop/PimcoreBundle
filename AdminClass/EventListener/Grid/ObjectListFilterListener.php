@@ -15,7 +15,7 @@ declare(strict_types=1);
  *
  */
 
-namespace CoreShop\Bundle\PimcoreBundle\EventListener\Grid;
+namespace CoreShop\Bundle\PimcoreBundle\AdminClass\EventListener\Grid;
 
 use CoreShop\Component\Pimcore\DataObject\Grid\GridFilterInterface;
 use CoreShop\Component\Registry\ServiceRegistryInterface;
