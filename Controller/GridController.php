@@ -15,10 +15,9 @@ declare(strict_types=1);
  *
  */
 
-namespace CoreShop\Bundle\PimcoreBundle\Controller\Admin;
+namespace CoreShop\Bundle\PimcoreBundle\Controller;
 
 use CoreShop\Component\Pimcore\DataObject\Grid\GridActionInterface;
-use CoreShop\Component\Pimcore\DataObject\Grid\GridFilterInterface;
 use CoreShop\Component\Pimcore\DataObject\Grid\StudioGridFilterInterface;
 use CoreShop\Component\Registry\ServiceRegistryInterface;
 use Pimcore\Controller\UserAwareController;
@@ -31,50 +30,12 @@ use Symfony\Contracts\Translation\TranslatorInterface;
  */
 class GridController extends UserAwareController
 {
-    /**
-     * Returns filters from the Classic Admin GridFilterInterface registry.
-     * Used by the ExtJS admin interface.
-     */
-    public function getGridFiltersAction(
-        string $listType,
-        ServiceRegistryInterface $gridFilterServiceRegistry,
-        TranslatorInterface $translator,
-    ): Response {
-        $services = [];
-        /**
-         * @var \Pimcore\Model\User $user
-         *
-         * @psalm-suppress InternalMethod
-         */
-        $user = $this->getPimcoreUser();
-        /** @var GridFilterInterface $service */
-        foreach ($gridFilterServiceRegistry->all() as $id => $service) {
-            if ($service->supports($listType) !== true) {
-                continue;
-            }
-
-            $services[] = [
-                'id' => $id,
-                'name' => $translator->trans($service->getName(), [], 'admin', $user->getLanguage()),
-            ];
-        }
-
-        return $this->json($services);
-    }
-
-    /**
-     * Returns filters from the StudioGridFilterInterface registry.
-     * Used by the Pimcore Studio v2 interface.
-     */
     public function getStudioGridFiltersAction(
-        Request $request,
         string $listType,
         ServiceRegistryInterface $studioGridFilterServiceRegistry,
         TranslatorInterface $translator,
     ): Response {
         $services = [];
-        $isStudio = $request->query->getBoolean('studio', false);
-        $translationDomain = $isStudio ? 'studio' : 'admin';
 
         /**
          * @var \Pimcore\Model\User $user
@@ -90,7 +51,7 @@ class GridController extends UserAwareController
 
             $services[] = [
                 'id' => $service->getType(),
-                'name' => $translator->trans($service->getLabel(), [], $translationDomain, $user->getLanguage()),
+                'name' => $translator->trans($service->getLabel(), [], 'studio', $user->getLanguage()),
             ];
         }
 
@@ -103,6 +64,7 @@ class GridController extends UserAwareController
         TranslatorInterface $translator,
     ): Response {
         $services = [];
+
         /**
          * @var \Pimcore\Model\User $user
          *
@@ -117,7 +79,7 @@ class GridController extends UserAwareController
 
             $services[] = [
                 'id' => $id,
-                'name' => $translator->trans($service->getName(), [], 'admin', $user->getLanguage()),
+                'name' => $translator->trans($service->getName(), [], 'studio', $user->getLanguage()),
             ];
         }
 
