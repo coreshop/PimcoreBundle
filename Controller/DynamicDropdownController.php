@@ -15,7 +15,7 @@ declare(strict_types=1);
  *
  */
 
-namespace CoreShop\Bundle\PimcoreBundle\Controller\Admin;
+namespace CoreShop\Bundle\PimcoreBundle\Controller;
 
 use Pimcore\Controller\UserAwareController;
 use Pimcore\Model\DataObject;
