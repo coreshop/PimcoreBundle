@@ -20,8 +20,8 @@
       "api": ""
     },
     "globalName": "coreshoppimcore",
-    "pluginVersion": "2.5.1",
-    "publicPath": "/bundles/coreshoppimcore/studio/30bbe39d-a7cd-4c00-a202-a649b5872e5a/"
+    "pluginVersion": "2.8.0",
+    "publicPath": "/bundles/coreshoppimcore/studio/b9cf2390-17a1-49ca-a66e-f6bb6669985f/"
   },
   "shared": [
     {
@@ -34,7 +34,7 @@
         "js": {
           "async": [],
           "sync": [
-            "static/js/async/920.50caa5f0.js"
+            "static/js/async/920.705104c8.js"
           ]
         },
         "css": {
@@ -54,8 +54,8 @@
         "js": {
           "async": [],
           "sync": [
-            "static/js/async/695.fe2c78d8.js",
-            "static/js/async/76.f171a4a2.js"
+            "static/js/async/695.2c79a21c.js",
+            "static/js/async/76.b59cadee.js"
           ]
         },
         "css": {
@@ -75,7 +75,7 @@
         "js": {
           "async": [],
           "sync": [
-            "static/js/async/375.e03d511e.js"
+            "static/js/async/375.cec871ca.js"
           ]
         },
         "css": {
@@ -113,8 +113,8 @@
       "assets": {
         "js": {
           "sync": [
-            "static/js/455.cf2d2f6e.js",
-            "static/js/async/__federation_expose_default_export.56a1d03e.js"
+            "static/js/455.cea29f40.js",
+            "static/js/async/__federation_expose_default_export.e178107f.js"
           ],
           "async": []
         },
