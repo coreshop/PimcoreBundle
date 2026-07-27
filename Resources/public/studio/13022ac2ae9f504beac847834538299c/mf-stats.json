@@ -21,9 +21,112 @@
     },
     "globalName": "coreshoppimcore",
     "pluginVersion": "2.5.1",
-    "publicPath": "/bundles/coreshoppimcore/studio/8d1c9e5f-b54f-4f68-a204-e497d32089d1/"
+    "publicPath": "/bundles/coreshoppimcore/studio/13022ac2ae9f504beac847834538299c/"
   },
   "shared": [
+    {
+      "singleton": true,
+      "requiredVersion": "^7.2.1",
+      "shareScope": "default",
+      "eager": false,
+      "strictVersion": false,
+      "name": "@ant-design/colors",
+      "version": "7.2.1",
+      "id": "coreshoppimcore:@ant-design/colors",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "static/js/async/202.b2c0e91f.js",
+            "static/js/async/821.f8adb635.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      },
+      "usedIn": [],
+      "usedExports": [],
+      "fallback": ""
+    },
+    {
+      "singleton": true,
+      "requiredVersion": "^5.29.1",
+      "shareScope": "default",
+      "eager": false,
+      "strictVersion": false,
+      "name": "antd",
+      "version": "5.29.1",
+      "id": "coreshoppimcore:antd",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "static/js/async/931.b17ef3d7.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      },
+      "usedIn": [
+        "."
+      ],
+      "usedExports": [],
+      "fallback": ""
+    },
+    {
+      "singleton": true,
+      "requiredVersion": "^2.5.1",
+      "shareScope": "default",
+      "eager": false,
+      "strictVersion": false,
+      "name": "classnames",
+      "version": "2.5.1",
+      "id": "coreshoppimcore:classnames",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "static/js/async/51.b0ec0523.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      },
+      "usedIn": [],
+      "usedExports": [],
+      "fallback": ""
+    },
+    {
+      "singleton": true,
+      "requiredVersion": "^1.11.19",
+      "shareScope": "default",
+      "eager": false,
+      "strictVersion": false,
+      "name": "dayjs",
+      "version": "1.11.19",
+      "id": "coreshoppimcore:dayjs",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "static/js/async/536.62477e64.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      },
+      "usedIn": [],
+      "usedExports": [],
+      "fallback": ""
+    },
     {
       "singleton": true,
       "requiredVersion": "^18.3.1",
@@ -144,14 +247,14 @@
       "name": ".",
       "requires": [
         "react/jsx-runtime",
-        "react"
+        "react",
+        "antd"
       ],
       "file": "src/main.ts",
       "assets": {
         "js": {
           "sync": [
-            "static/js/455.cf2d2f6e.js",
-            "static/js/async/__federation_expose_default_export.56a1d03e.js"
+            "static/js/async/__federation_expose_default_export.38838513.js"
           ],
           "async": []
         },
