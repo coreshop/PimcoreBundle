@@ -21,7 +21,7 @@
     },
     "globalName": "coreshoppimcore",
     "pluginVersion": "2.8.0",
-    "publicPath": "/bundles/coreshoppimcore/studio/37f449743d9ca73d7023be142dc3c4bb/"
+    "publicPath": "/bundles/coreshoppimcore/studio/2385ab9068c15a3c013cba9447d28780/"
   },
   "shared": [
     {
@@ -194,7 +194,7 @@
       "assets": {
         "js": {
           "sync": [
-            "static/js/async/__federation_expose_default_export.af76c746.js"
+            "static/js/async/__federation_expose_default_export.4fe68d24.js"
           ],
           "async": []
         },
