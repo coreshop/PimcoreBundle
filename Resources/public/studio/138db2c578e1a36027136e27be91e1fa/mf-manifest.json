@@ -20,19 +20,16 @@
       "api": ""
     },
     "globalName": "coreshoppimcore",
-    "pluginVersion": "2.8.0",
-    "publicPath": "/bundles/coreshoppimcore/studio/2385ab9068c15a3c013cba9447d28780/"
+    "pluginVersion": "2.9.0",
+    "publicPath": "/bundles/coreshoppimcore/studio/138db2c578e1a36027136e27be91e1fa/"
   },
   "shared": [
     {
-      "singleton": true,
-      "requiredVersion": "^7.2.1",
-      "shareScope": "default",
-      "eager": false,
-      "strictVersion": false,
+      "id": "coreshoppimcore:@ant-design/colors",
       "name": "@ant-design/colors",
       "version": "7.2.1",
-      "id": "coreshoppimcore:@ant-design/colors",
+      "singleton": true,
+      "requiredVersion": "^7.2.1",
       "assets": {
         "js": {
           "async": [],
@@ -46,19 +43,14 @@
           "sync": []
         }
       },
-      "usedIn": [],
-      "usedExports": [],
       "fallback": ""
     },
     {
-      "singleton": true,
-      "requiredVersion": "^5.29.1",
-      "shareScope": "default",
-      "eager": false,
-      "strictVersion": false,
+      "id": "coreshoppimcore:antd",
       "name": "antd",
       "version": "5.29.1",
-      "id": "coreshoppimcore:antd",
+      "singleton": true,
+      "requiredVersion": "^5.29.1",
       "assets": {
         "js": {
           "async": [],
@@ -71,21 +63,14 @@
           "sync": []
         }
       },
-      "usedIn": [
-        "."
-      ],
-      "usedExports": [],
       "fallback": ""
     },
     {
-      "singleton": true,
-      "requiredVersion": "^2.5.1",
-      "shareScope": "default",
-      "eager": false,
-      "strictVersion": false,
+      "id": "coreshoppimcore:classnames",
       "name": "classnames",
       "version": "2.5.1",
-      "id": "coreshoppimcore:classnames",
+      "singleton": true,
+      "requiredVersion": "^2.5.1",
       "assets": {
         "js": {
           "async": [],
@@ -98,19 +83,14 @@
           "sync": []
         }
       },
-      "usedIn": [],
-      "usedExports": [],
       "fallback": ""
     },
     {
-      "singleton": true,
-      "requiredVersion": "^1.11.19",
-      "shareScope": "default",
-      "eager": false,
-      "strictVersion": false,
+      "id": "coreshoppimcore:dayjs",
       "name": "dayjs",
       "version": "1.11.19",
-      "id": "coreshoppimcore:dayjs",
+      "singleton": true,
+      "requiredVersion": "^1.11.19",
       "assets": {
         "js": {
           "async": [],
@@ -123,19 +103,14 @@
           "sync": []
         }
       },
-      "usedIn": [],
-      "usedExports": [],
       "fallback": ""
     },
     {
-      "singleton": true,
-      "requiredVersion": "^18.3.1",
-      "shareScope": "default",
-      "eager": false,
-      "strictVersion": false,
+      "id": "coreshoppimcore:react-dom",
       "name": "react-dom",
       "version": "18.3.1",
-      "id": "coreshoppimcore:react-dom",
+      "singleton": true,
+      "requiredVersion": "^18.3.1",
       "assets": {
         "js": {
           "async": [],
@@ -148,19 +123,14 @@
           "sync": []
         }
       },
-      "usedIn": [],
-      "usedExports": [],
       "fallback": ""
     },
     {
-      "singleton": true,
-      "requiredVersion": "^18.3.1",
-      "shareScope": "default",
-      "eager": false,
-      "strictVersion": false,
+      "id": "coreshoppimcore:react/jsx-runtime",
       "name": "react/jsx-runtime",
       "version": "18.3.1",
-      "id": "coreshoppimcore:react/jsx-runtime",
+      "singleton": true,
+      "requiredVersion": "^18.3.1",
       "assets": {
         "js": {
           "async": [],
@@ -174,21 +144,14 @@
           "sync": []
         }
       },
-      "usedIn": [
-        "."
-      ],
-      "usedExports": [],
       "fallback": ""
     },
     {
-      "singleton": true,
-      "requiredVersion": "^18.3.1",
-      "shareScope": "default",
-      "eager": false,
-      "strictVersion": false,
+      "id": "coreshoppimcore:react",
       "name": "react",
       "version": "18.3.1",
-      "id": "coreshoppimcore:react",
+      "singleton": true,
+      "requiredVersion": "^18.3.1",
       "assets": {
         "js": {
           "async": [],
@@ -201,56 +164,33 @@
           "sync": []
         }
       },
-      "usedIn": [
-        "."
-      ],
-      "usedExports": [],
       "fallback": ""
     }
   ],
   "remotes": [
     {
-      "alias": "@pimcore/studio-ui-bundle",
-      "consumingFederationContainerName": "coreshoppimcore",
       "federationContainerName": "promise new Promise(resolve => {\n      const studioUIBundleRemoteUrl = window.StudioUIBundleRemoteUrl\n      const script = document.createElement('script')\n\n      let hasScript = false;\n\n      document.querySelectorAll('script').forEach((el) => {\n        const elPathname = el.src.replace(/https?:\\/\\/[^/]+/, '')\n        const studioUIBundleRemoteUrlPathname = studioUIBundleRemoteUrl.replace(/https?:\\/\\/[^/]+/, '')\n\n        if (elPathname === studioUIBundleRemoteUrlPathname) {\n          hasScript = true;\n          return;\n        }\n      })\n\n      if (hasScript) {\n        resolve({\n          get: (request) => window['pimcore_studio_ui_bundle'].get(request),\n          init: (...arg) => {\n            try {\n              return window['pimcore_studio_ui_bundle'].init(...arg)\n            } catch(e) {\n              console.log('remote container already initialized')\n            }\n          }\n        })\n        return\n      }\n\n      script.src = studioUIBundleRemoteUrl\n      script.onload = () => {\n        const proxy = {\n          get: (request) => window['pimcore_studio_ui_bundle'].get(request),\n          init: (...arg) => {\n            try {\n              return window['pimcore_studio_ui_bundle'].init(...arg)\n            } catch(e) {\n              console.log('remote container already initialized')\n            }\n          }\n        }\n        resolve(proxy)\n      }\n      document.head.appendChild(script);\n    })\n    ",
       "moduleName": ".",
-      "usedIn": [
-        "src/main.ts + 15 modules"
-      ],
-      "version": "*"
+      "alias": "@pimcore/studio-ui-bundle",
+      "entry": "*"
     },
     {
-      "alias": "@pimcore/studio-ui-bundle",
-      "consumingFederationContainerName": "coreshoppimcore",
       "federationContainerName": "promise new Promise(resolve => {\n      const studioUIBundleRemoteUrl = window.StudioUIBundleRemoteUrl\n      const script = document.createElement('script')\n\n      let hasScript = false;\n\n      document.querySelectorAll('script').forEach((el) => {\n        const elPathname = el.src.replace(/https?:\\/\\/[^/]+/, '')\n        const studioUIBundleRemoteUrlPathname = studioUIBundleRemoteUrl.replace(/https?:\\/\\/[^/]+/, '')\n\n        if (elPathname === studioUIBundleRemoteUrlPathname) {\n          hasScript = true;\n          return;\n        }\n      })\n\n      if (hasScript) {\n        resolve({\n          get: (request) => window['pimcore_studio_ui_bundle'].get(request),\n          init: (...arg) => {\n            try {\n              return window['pimcore_studio_ui_bundle'].init(...arg)\n            } catch(e) {\n              console.log('remote container already initialized')\n            }\n          }\n        })\n        return\n      }\n\n      script.src = studioUIBundleRemoteUrl\n      script.onload = () => {\n        const proxy = {\n          get: (request) => window['pimcore_studio_ui_bundle'].get(request),\n          init: (...arg) => {\n            try {\n              return window['pimcore_studio_ui_bundle'].init(...arg)\n            } catch(e) {\n              console.log('remote container already initialized')\n            }\n          }\n        }\n        resolve(proxy)\n      }\n      document.head.appendChild(script);\n    })\n    ",
       "moduleName": "app",
-      "usedIn": [
-        "src/main.ts + 15 modules"
-      ],
-      "version": "*"
+      "alias": "@pimcore/studio-ui-bundle",
+      "entry": "*"
     },
     {
-      "alias": "@pimcore/studio-ui-bundle",
-      "consumingFederationContainerName": "coreshoppimcore",
       "federationContainerName": "promise new Promise(resolve => {\n      const studioUIBundleRemoteUrl = window.StudioUIBundleRemoteUrl\n      const script = document.createElement('script')\n\n      let hasScript = false;\n\n      document.querySelectorAll('script').forEach((el) => {\n        const elPathname = el.src.replace(/https?:\\/\\/[^/]+/, '')\n        const studioUIBundleRemoteUrlPathname = studioUIBundleRemoteUrl.replace(/https?:\\/\\/[^/]+/, '')\n\n        if (elPathname === studioUIBundleRemoteUrlPathname) {\n          hasScript = true;\n          return;\n        }\n      })\n\n      if (hasScript) {\n        resolve({\n          get: (request) => window['pimcore_studio_ui_bundle'].get(request),\n          init: (...arg) => {\n            try {\n              return window['pimcore_studio_ui_bundle'].init(...arg)\n            } catch(e) {\n              console.log('remote container already initialized')\n            }\n          }\n        })\n        return\n      }\n\n      script.src = studioUIBundleRemoteUrl\n      script.onload = () => {\n        const proxy = {\n          get: (request) => window['pimcore_studio_ui_bundle'].get(request),\n          init: (...arg) => {\n            try {\n              return window['pimcore_studio_ui_bundle'].init(...arg)\n            } catch(e) {\n              console.log('remote container already initialized')\n            }\n          }\n        }\n        resolve(proxy)\n      }\n      document.head.appendChild(script);\n    })\n    ",
       "moduleName": "modules/element",
-      "usedIn": [
-        "src/main.ts + 15 modules"
-      ],
-      "version": "*"
+      "alias": "@pimcore/studio-ui-bundle",
+      "entry": "*"
     }
   ],
   "exposes": [
     {
-      "path": ".",
       "id": "coreshoppimcore:.",
       "name": ".",
-      "requires": [
-        "react/jsx-runtime",
-        "react",
-        "antd"
-      ],
-      "file": "src/main.ts",
       "assets": {
         "js": {
           "sync": [
@@ -262,7 +202,8 @@
           "sync": [],
           "async": []
         }
-      }
+      },
+      "path": "."
     }
   ]
 }
